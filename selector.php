@@ -27,7 +27,7 @@ switch($_SESSION['location']){
         break;
     case 'Lebanon':
         $_SESSION['region'] = 'Middle East';
-        header("Location:./lbn");
+        header("Location:./leb");
         break;
 }
 ?>
