@@ -85,7 +85,8 @@ switch ($data['countryName']) {
         <div id="mainTextBox">
             <h1><span> IslandMovers - <?php echo $_SESSION['region']; ?></span></h1>
             <?php echo $message; ?>
-            <a href="../">Continue</a>
+            <a href="./">Continue</a>
+
         </div>
 
     </div>
