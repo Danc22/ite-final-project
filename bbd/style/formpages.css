@@ -1,0 +1,293 @@
+:root {
+    --body: linear-gradient(45deg, black 50%, gold 50%);
+    --main: #5e5e5e;
+    --main-text: aliceblue;
+    --input-background: aliceblue;
+    --input-color: black;
+    --header: linear-gradient(45deg, black 50%, gold 50%);
+    --form-text: aliceblue;
+    --link-color: linear-gradient(60deg, gold, black);
+    --hr-color: silver;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vh;
+}
+::placeholder {
+    color: silver;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: silver;
+  }
+  [type='datetime-local']::-webkit-calendar-picker-indicator {
+
+
+    background-color: #5e5e5e;
+    font-size: 45px;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-image: var(--body);
+    background-size: 100%;
+    min-height: 100vh;
+    margin: 5vh 0;
+    overflow:auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: var(--body-position);
+    transition: all linear 0.8s;
+    -webkit-transition: all linear 0.8s;
+    -moz-transition: all linear 0.8s;
+    -ms-transition: all linear 0.8s;
+    -o-transition: all linear 0.8s;
+}
+
+a, #regionSelect, [type='button'] {
+    --button-text: black;
+    --button-background: var(--main);
+    font-size: 3vh;
+    border-radius: 2vh;
+    margin-top: 5px;
+    min-height: 50px;
+    width: 100%;
+    background: var(--button-background);
+    color: var(--button-text);
+    transition: all 0.5s;
+    border-width: 2px;
+    border-style: outset;
+    border-color: var(--button-text);
+    border-image: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-clip: border-box;
+    flex-direction: column;
+    text-decoration: none;
+    -webkit-border-radius: 2vh;
+    -moz-border-radius: 2vh;
+    -ms-border-radius: 2vh;
+    -o-border-radius: 2vh;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+a:hover, #regionSelect:hover, [type='button']:hover {
+    --button-background: black !important;
+    --button-text: gold !important;
+}
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vh;
+    border-radius: 25px;
+    padding: 2vw 1vh;
+
+    transition: 1s;
+    overflow: visible;
+    color: var(--main-text);
+    background-color: var(--main);
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    background-image: url(../images/backgroundright.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#mainTextBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 2px solid var(--hr-color);
+    padding-bottom: 10px;
+}
+
+
+form {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    border-bottom: 3px solid grey;
+    margin: 20px 0;
+    width: 40vh;
+    position: relative;
+    right: auto;
+}
+
+input{
+    width: 100%;
+    padding: 0;
+    height: 40px;
+    border: none;
+    background-color: var(--input-background);
+    color: var(--input-color);
+    outline: none;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.id {
+    width: 220px;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--input-background);
+    color: var(--input-color);
+    outline: none;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+
+
+.text span::before {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg,black, #ffd700 );
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.text input:focus~span,
+.text input:valid~span {
+    width: 100%;
+}
+
+.text input:focus~span::before,
+.text input:valid~span::before {
+    width: 100%;
+}
+
+#back {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    color: aliceblue;
+    background: indigo;
+    text-align: center;
+    transition: all 0.3s linear;
+    border: 1px solid indigo;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+#back:hover {
+    color: indigo;
+    background-color: aliceblue;
+
+}
+
+[type="submit"],
+[type="reset"],
+#back {
+    height: 40px;
+    font-size: 2.5vh;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+    border: 0;
+    border-radius: 15px;
+    transition: all 0.2s linear;
+    color: aliceblue;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+[type="submit"],[type="reset"]{
+    width: 49%;
+}
+
+[type="submit"] {
+    background-color: #85c226;
+    border: 1px solid #85c226;
+}
+
+[type="submit"]:hover {
+    background-color: aliceblue;
+    color: #85c226;
+}
+
+[type="reset"] {
+    background-color: red;
+    border: 1px solid red;
+}
+
+[type="reset"]:hover {
+    background-color: aliceblue;
+    color: red;
+}
+
+h1 {
+    font-size: 3.3vh;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--hr-color);
+    padding-bottom: 10px;
+}
+h1 span{
+    background-color: transparent;
+    background: var(--header);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+}
