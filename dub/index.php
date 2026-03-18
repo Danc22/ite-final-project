@@ -27,7 +27,7 @@ if (!(isset($_SESSION['country']) || isset($_SESSION['incorrectLocation']))) {
       <a href="./pending_rides.php">Pending Rides</a>
       <?php echo (isset($_SESSION['loggedin'])) ?  '<a href="./function/logout.php">Log Out</a>
       <a href="./order.php>Book a Ride </a>"': '<a href="./login.php">Login/Sign Up</a>';  ?>
-      <a href="./about.html">About</a>
+      <a href="../">Return to Main Menu</a>
     </div>
 
   </div>
